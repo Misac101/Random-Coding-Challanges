@@ -1,0 +1,77 @@
+#include <iostream>
+#include <cmath>
+int main() {
+
+bool Bought;
+while (Bought != true) {
+std::cout << " \n" << "                Apple Store   \n" << " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+
+char Yes;
+int Qt_1st;
+int Qt_2nd;
+int Qt_3rd;
+double Cart_Total = 0.00;
+
+std::cout << "     -AirPods(1st Generation) $79.99 \n";
+std::cout << "      Qt: ";
+std::cin >> Qt_1st;
+std::cout << " \n";
+
+std::cout << "     -AirPods(2st Generation) $129.99\n"; 
+std::cout << "      Qt: ";
+std::cin >> Qt_2nd;
+std::cout << " \n" << " \n";
+
+std::cout << "     -AirPods(3st Generation) $179.99\n";
+std::cout << "      Qt: ";
+std::cin >> Qt_3rd;
+std::cout << " \n" << " \n";
+std::cout << "   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+
+if (Qt_1st == 0 && Qt_2nd == 0 && Qt_3rd == 0)
+ { 
+    std::cout << "     Please pick a product from the list" << "\n";
+}
+else if ( Qt_1st >= 1 || Qt_2nd >= 1 || Qt_3rd >= 1) {
+    double total_1st = 0;
+    double total_2nd = 0;
+    double total_3rd = 0;
+
+if (Qt_1st != 0) {
+total_1st += (79.99) * (Qt_1st);
+}
+
+if (Qt_2nd != 0) {
+total_2nd += (129.99) * (Qt_2nd);
+}
+
+if (Qt_3rd != 0) {
+total_3rd += (179.99) * (Qt_3rd);
+}
+
+
+Cart_Total += (total_1st + total_2nd + total_3rd);
+double Total = 0.00;
+Total += Cart_Total + (Cart_Total * 0.0825);
+
+Total += 0.001;
+
+
+std::cout << "          Subtotal: $" << Cart_Total << " \n" << "                                  + tax\n";
+std::cout << "   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+std::cout << " Are you sure you want to check this out? (Y/N)\n" << "               Total: " << Total << " \n" << "                    ~~~~~\n" << "                      ";
+std::cin >> Yes;
+std::cout << "                    ~~~~~\n";
+
+if (Yes == 'y'|| Yes == 'Y') {
+    std::cout << " \n" << "           Thank you for your order!\n";
+
+    (Bought = true);
+    }
+else {
+    std::cout << "     " << "\n";
+}
+}
+std::cout << "\n" << "\n";
+}
+}

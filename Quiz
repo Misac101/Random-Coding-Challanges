@@ -1,0 +1,100 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+/* at least ten questions all different with different answers too
+make sure the questions are outputed at random otherwise its instant desqualification
+make the outputs and inputs look neat
+*/
+
+using namespace std;
+
+
+int main() {
+std::string Answer_1;
+std::string Answer_2;
+std::string Answer_3;
+std::string Answer_4;
+std::string Answer_5;
+bool Answer__1;
+bool Answer__2;
+bool Answer__3; 
+bool Answer__4;
+bool Answer__5;
+int grade = 0;
+
+std::cout << " Quiz\n\n";
+
+
+std::cout << " Is the sky blue in the day?(True/False)\n" << " Answer: ";
+std::cin >> Answer_1;
+std::cout << " \n\n";
+if (Answer_1 == "True") {
+    grade += 20;
+    Answer__1 = true;
+}
+
+std::cout << " Does 1 + 1 = 2?(True/False)\n" << " Answer: ";
+std::cin >> Answer_2;
+std::cout << " \n\n";
+if (Answer_2 == "True") {
+    grade += 20;
+    Answer__2 = true;
+}
+
+std::cout << " Does 9 + 1 = 10?(True/False)\n" << " Answer: ";
+std::cin >> Answer_3;
+std::cout << " \n\n";
+if (Answer_3 == "True") {
+    grade += 20;
+    Answer__3 = true;
+}
+
+std::cout << " Does 1 + 2 = 1?(True/False)\n" << " Answer: ";
+std::cin >> Answer_4;
+std::cout << " \n\n";
+if (Answer_4 == "False") {
+    grade += 20;
+    Answer__4 = false;
+}
+
+std::cout << " Does 7 * 2 = 5?(True/False)\n" << " Answer: ";
+std::cin >> Answer_5;
+std::cout << " \n\n";
+if (Answer_5 == "False") {
+    grade += 20;
+    Answer__5 = false;
+}
+
+std::cout << " You're score is " << grade << "% \n\n";
+
+if (grade != 100) {
+
+std::cout << "You got these questions wrong:\n";
+
+if (Answer__1 != true) {
+    std::cout << " Is the sky blue in the day?\n";
+}
+
+if (Answer__2 != true) {
+    std::cout << " Does 1 + 1 = 2?\n";
+}
+
+if (Answer__3 != true) {
+    std::cout << " Does 9 + 1 = 10?\n";
+}
+if (Answer__4 != false) {
+    std::cout << " Does 1 + 2 = 1?\n";
+}
+
+if (Answer__5 != false || Answer_5 != "False") {
+    std::cout << " Does 7 * 2 = 5?\n";
+}
+if (Answer__5 != false) {
+    std::cout << "\n";
+}
+}
+else {
+    std::cout << " You got no questions wrong!\n";
+}
+std::cout << "\n";
+}

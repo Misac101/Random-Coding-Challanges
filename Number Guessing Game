@@ -1,0 +1,43 @@
+#include <iostream>
+#include <cstdlib>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+  int guess;
+  
+  int tries = 0;
+  int Number;
+srand (time(NULL));
+Number = rand() % 35 + 1;
+ 
+
+  std::cout << "\n" << "\n" << "               I have a number 1-35.\n" << "      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+  std::cout << "         You have 15 tries to guess it: ";
+  std::cin >> guess;
+
+  while (guess != Number && tries < 15) {
+    std::cout << "           Wrong guess, try again: ";
+    std::cin >> guess;
+    tries++;
+  }
+
+
+if (guess != Number && tries >= 15) {
+      std::cout << "      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << "\n";
+
+      std::cout << "                  Game Over!!!!!!!!  \n" << "\n" << "      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" <<"                The Number was " << Number << ".\n";
+
+  }   
+
+
+  if (guess == Number) {
+    
+    std::cout << "     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << "\n" << "                   Good Job!!!!\n" << "      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" << "                   You got it!!\n";
+  
+  }  
+ std::cout << "\n" << "\n";
+  
+}
